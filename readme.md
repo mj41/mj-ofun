@@ -80,6 +80,20 @@ Visual Studio Code extension for `gl:` git link syntax. See `gl-git-links` repo 
 
 git repo: [vscode-gl-git-links](https://github.com/mj41/vscode-gl-git-links)
 
+## gl-exA, gl-exA-src
+
+`gl-exA` is an example repository for `gl-git-links` tools. `gl-exA-src` contains assets to programmatically generate the `gl-exA` git repository including git history.
+
+git repos:
+- [gl-exA](https://github.com/mj41/gl-exA)
+- [gl-exA-src](https://github.com/mj41/gl-exA-src)
+
+# git-rgen-tool
+
+Tool to programmatically generate git repositories from structured assets.
+
+git repo: [git-rgen-tool](https://github.com/mj41/git-rgen-tool)
+
 ## git-wmem
 
 Git based utils to track uncommitted changes in multiple git repositories. Triggered by events, periodically or manually.
