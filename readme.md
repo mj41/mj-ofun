@@ -100,6 +100,12 @@ Git based utils to track uncommitted changes in multiple git repositories. Trigg
 
 git repo: [git-wmem](https://github.com/mj41/git-wmem)
 
+## git-mj-rebase
+
+Git rebase tool.
+
+git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase)
+
 ## vscode-staiwatch-logger
 
 A VS Code extension that logs workspace and file events to JSONL files for audit and analysis purposes.
