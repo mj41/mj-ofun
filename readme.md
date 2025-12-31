@@ -158,6 +158,12 @@ git repo: soon
 
 # Others
 
+## minecraft-fedora-installer
+
+Per-user Minecraft launcher installer for Fedora Linux (Go). Downloads the official launcher, installs it into XDG locations, and creates a desktop entry with automatic GPU detection.
+
+git repo: [minecraft-fedora-installer](https://github.com/mj41/minecraft-fedora-installer)
+
 ## mj-ofun
 
 This repository.
