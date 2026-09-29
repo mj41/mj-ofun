@@ -1,7 +1,5 @@
-# Agents
+# Repo Overview
 
-This repository provides an overview of all projects.
+This repository provides an overview of mj41's projects not in stealth mode.
 
-Notable repos referenced here include:
-
-- https://github.com/mj41/minecraft-fedora-installer
+For detailed project descriptions, see [readme.md](readme.md).
