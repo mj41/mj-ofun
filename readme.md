@@ -156,6 +156,27 @@ Integrated `ipm-golog-refs`, `ipm-ptrace` `and ipm-fuzzy-match` tool to trace pr
 
 git repo: soon
 
+# Robots
+
+## stackchan-server
+
+Relay server for M5Stack Stack-chan "Embody Mode" (Go, single binary). The robot connects out over WebSocket, and a phone pairs by scanning the QR code on the robot's screen. The phone then gets a live dashboard:
+- telemetry and events
+- head motion
+- face, speech and stickers
+- pictures from the phone
+- LEDs
+- latency ping
+- the robot's camera and microphone
+
+git repo: [stackchan-server](https://github.com/mj41/stackchan-server)
+
+## StackChan firmware: Embody Mode
+
+Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embody Mode app, the robot side of `stackchan-server`. It also disables the xiaozhi firmware auto-update from a third-party server.
+
+git repo: later
+
 # Others
 
 ## minecraft-fedora-installer
