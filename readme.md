@@ -177,6 +177,12 @@ Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embod
 
 git repo: later
 
+## stackchan-pet
+
+A Tamagotchi for Stack-chan (Go), a second Embody Mode server the robot switches to. Kids care for the pet on the robot itself (head touches, NFC food cards, menus on the screen) and on a picture page on a phone. It has games: catch the ball, and a color game with a photo leaderboard. Parents set the daily routine, school hours and limits behind a PIN. Czech and English, with a kid-friendly robot voice.
+
+git repo: later
+
 # Others
 
 ## minecraft-fedora-installer
