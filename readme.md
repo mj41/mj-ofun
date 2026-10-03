@@ -156,32 +156,77 @@ Integrated `ipm-golog-refs`, `ipm-ptrace` `and ipm-fuzzy-match` tool to trace pr
 
 git repo: soon
 
-# Robots
+# home-w42-eu: a local first home platform, with Stackchan robots
 
-## stackchan-server
+A **local first, security and privacy first platform for a home**: Go servers on a small
+machine at home, every device (new or old) a light client of them, and loops that AI
+helps you write and you approve. The first devices are M5Stack Stackchan robots and a
+micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet.
 
-Relay server for M5Stack Stack-chan "Embody Mode" (Go, single binary). The robot connects out over WebSocket, and a phone pairs by scanning the QR code on the robot's screen. The phone then gets a live dashboard:
-- telemetry and events
-- head motion
-- face, speech and stickers
-- pictures from the phone
-- LEDs
-- latency ping
-- the robot's camera and microphone
+Public instance of the robot dashboard: [chan.w42.eu](https://chan.w42.eu).
 
-git repo: [stackchan-server](https://github.com/mj41/stackchan-server)
+## home-w42-eu
+
+Vision, use cases (the main driver), principles, architecture and the device wire protocol.
+
+git repo: [home-w42-eu](https://github.com/mj41/home-w42-eu)
+
+## home-w42-eu-ideas
+
+Ideas for devices, adapters and loops: old phones, a Roomba, Home Assistant, a private GPS
+app, cameras, Wi-Fi presence, calendars, personal captures, local voice.
+
+git repo: [home-w42-eu-ideas](https://github.com/mj41/home-w42-eu-ideas)
 
 ## StackChan firmware: Embody Mode
 
-Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embody Mode app, the robot side of `stackchan-server`. It also disables the xiaozhi firmware auto-update from a third-party server.
+Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embody Mode app:
+the robot as a light client of a server you choose (camera, microphone, speaker, every
+sensor as raw data, commands), switchable between servers and apps. Optional: it drives a
+TPBot car over BLE, and servers can automate it. Setup guide:
+[SETUP.md](https://github.com/mj41/StackChan/blob/embody-mj41/firmware/main/apps/app_embody_mode/SETUP.md).
 
-git repo: later
+git repo: [StackChan, branch embody-mj41](https://github.com/mj41/StackChan/tree/embody-mj41)
+
+## stackchan-server
+
+Relay and dashboard for Stackchan robots in Embody Mode (Go, single binary), and the Go
+implementation of the wire protocol. The robot connects out over WebSocket, and a phone
+pairs by scanning the QR code on the robot's screen. The phone then gets a live dashboard:
+camera, microphone, speaker, head motion, face, LEDs, every sensor, IR, NFC, files.
+
+git repo: [stackchan-server](https://github.com/mj41/stackchan-server)
 
 ## stackchan-pet
 
-A Tamagotchi for Stack-chan (Go), a second Embody Mode server the robot switches to. Kids care for the pet on the robot itself (head touches, NFC food cards, menus on the screen) and on a picture page on a phone. It has games: catch the ball, and a color game with a photo leaderboard. Parents set the daily routine, school hours and limits behind a PIN. Czech and English, with a kid-friendly robot voice.
+A Tamagotchi for Stackchan (Go), a second Embody Mode server the robot switches to. Kids
+care for the pet on the robot itself (head touches, NFC food cards, menus on the screen) and
+on a picture page on a phone. Games, a photo leaderboard, and a parent page with the daily
+routine behind a PIN. Czech and English.
 
-git repo: later
+git repo: [stackchan-pet](https://github.com/mj41/stackchan-pet)
+
+## sbot
+
+The seed of the home node: a web/API server with a cockpit for a Stackchan and a TPBot car
+(camera, joystick, head pad, lights, a sonar safety stop), an event hub (NATS JetStream),
+and a controller server for loops.
+
+git repo: [sbot](https://github.com/mj41/sbot)
+
+## tpbot-ble
+
+micro:bit V2 firmware (TinyGo) for the ELECFREAKS TPBot car: a BLE peripheral with raw
+sensors and a watchdog, plus a laptop tool and a bridge.
+
+git repo: [tpbot-ble](https://github.com/mj41/tpbot-ble)
+
+## stackchan-mj
+
+Notes, scripts and tools for working on Stackchan with Embody Mode: build and flash, run the
+servers in the background, hardware coverage, the trust design.
+
+git repo: [stackchan-mj](https://github.com/mj41/stackchan-mj)
 
 # Others
 
