@@ -161,7 +161,9 @@ git repo: soon
 A **local first, security and privacy first platform for a home**: Go servers on a small
 machine at home, every device (new or old) a light client of them, and loops that AI
 helps you write and you approve. The first devices are M5Stack Stackchan robots and a
-micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet.
+micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet. Licenses: MIT for the
+Stackchan firmware fork and the two servers built with it (stackchan-server, stackchan-pet),
+Apache-2.0 for the rest.
 
 Public instance of the robot dashboard: [chan.w42.eu](https://chan.w42.eu).
 
@@ -171,12 +173,16 @@ Vision, use cases (the main driver), principles, architecture and the device wir
 
 git repo: [home-w42-eu](https://github.com/mj41/home-w42-eu)
 
+license: Apache-2.0
+
 ## home-w42-eu-ideas
 
 Ideas for devices, adapters and loops: old phones, a Roomba, Home Assistant, a private GPS
 app, cameras, Wi-Fi presence, calendars, personal captures, local voice.
 
 git repo: [home-w42-eu-ideas](https://github.com/mj41/home-w42-eu-ideas)
+
+license: Apache-2.0
 
 ## StackChan firmware: Embody Mode
 
@@ -188,6 +194,8 @@ TPBot car over BLE, and servers can automate it. Setup guide:
 
 git repo: [StackChan, branch embody-mj41](https://github.com/mj41/StackChan/tree/embody-mj41)
 
+license: MIT (the firmware, as upstream)
+
 ## stackchan-server
 
 Relay and dashboard for Stackchan robots in Embody Mode (Go, single binary), and the Go
@@ -196,6 +204,8 @@ pairs by scanning the QR code on the robot's screen. The phone then gets a live 
 camera, microphone, speaker, head motion, face, LEDs, every sensor, IR, NFC, files.
 
 git repo: [stackchan-server](https://github.com/mj41/stackchan-server)
+
+license: MIT
 
 ## stackchan-pet
 
@@ -206,6 +216,8 @@ routine behind a PIN. Czech and English.
 
 git repo: [stackchan-pet](https://github.com/mj41/stackchan-pet)
 
+license: MIT
+
 ## sbot
 
 The seed of the home node: a web/API server with a cockpit for a Stackchan and a TPBot car
@@ -214,6 +226,8 @@ and a controller server for loops.
 
 git repo: [sbot](https://github.com/mj41/sbot)
 
+license: Apache-2.0
+
 ## tpbot-ble
 
 micro:bit V2 firmware (TinyGo) for the ELECFREAKS TPBot car: a BLE peripheral with raw
@@ -221,12 +235,16 @@ sensors and a watchdog, plus a laptop tool and a bridge.
 
 git repo: [tpbot-ble](https://github.com/mj41/tpbot-ble)
 
+license: Apache-2.0
+
 ## stackchan-mj
 
 Notes, scripts and tools for working on Stackchan with Embody Mode: build and flash, run the
 servers in the background, hardware coverage, the trust design.
 
 git repo: [stackchan-mj](https://github.com/mj41/stackchan-mj)
+
+license: Apache-2.0
 
 # Others
 
