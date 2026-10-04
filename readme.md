@@ -1,160 +1,99 @@
 # Overview
 
-Various [mj41's projects](https://github.com/mj41).
+Various [mj41's projects](https://github.com/mj41):
 
-# VS Code Related Projects
+1. [infinite.pm: Infinite Process Modeling](#infinitepm-infinite-process-modeling)
+2. [home-w42-eu: a local first home platform, with Stackchan robots](#home-w42-eu-a-local-first-home-platform-with-stackchan-robots)
+3. [stai: VS Code and AI agent tooling](#stai-vs-code-and-ai-agent-tooling)
+4. [Git tools](#git-tools)
+5. [Minecraft](#minecraft)
+6. [mj41.cz](#mj41cz)
+7. [Web and infrastructure](#web-and-infrastructure)
+8. [Forks](#forks)
+9. [Older projects](#older-projects)
 
-## stai-vscode
+Licenses: Apache-2.0 unless noted; forks and older projects keep their own.
 
-Toolset and configuration for Visual Studio Code.
+# infinite.pm: Infinite Process Modeling
 
-git repo: [stai-vscode](https://github.com/mj41/stai-vscode)
+[infinite.pm](https://infinite.pm) is a way to model processes, stories and systems as
+readable graphs. It is an experiment in applying Mark Burgess's
+[Semantic Spacetime γ(3,4)](https://arxiv.org/abs/2506.07756) to everyday modeling and
+software engineering: three kinds of nodes (event, thing, concept) and four kinds of edges
+(leads-to, part-of, expresses, near-to) are enough to sketch any observer's view of anything
+in space and time. You write plain text (`ipmt`) next to your code and docs, and the tools
+render the diagrams from it.
 
-### cmd/vscode-bin-manager
+All repos live in the [infinite-pm GitHub org](https://github.com/orgs/infinite-pm/repositories).
+Start with [ipm-intro](https://github.com/infinite-pm/ipm-intro), play in the
+[lab](https://lab.infinite.pm).
 
-VS Code binary manager for downloading, installing, and managing multiple VS Code insiders daily builds.
+<a href="https://infinite.pm/ipm11/maxed.html"><img src="imgs/ipm-etc-LPXN-reads.svg" alt="The ipm triangle: event, thing and concept nodes with the four edge kinds, beside the eleven legal edges as they read" width="100%"></a>
 
-### cmd/ws-config-gen
+A small model from the intro, *Patrick swaps a black t-shirt for a white one*: events lead to
+events, things are part of events, and both express concepts:
 
-VS Code automation and configuration tools.
+![Patrick swaps t-shirts: a three-level event tree, Patrick and the t-shirts as participants, and the concepts they express](imgs/ipm-intro-patrick.svg)
 
-Generates VS Code separate profiles and Fedora Linux desktop shortcuts:
-![stai-fedora-profiles](imgs/stai-fedora-profiles.png)
+## ipm-intro
 
-Each has its own settings, extensions, configurations and title bar color:
-![stai-vscode-E](imgs/stai-vscode-E.png)
+A newcomer's introduction to infinite.pm, built up step by step by example: the three node
+kinds, the four edge kinds, all eleven allowed edges, and worked examples.
 
-### stai-vscode-userconf
+git repo: [ipm-intro](https://github.com/infinite-pm/ipm-intro)
 
-User configuration templates for VS Code.
-```
-~/work-stai/stai-vscode-userconf [main L|✔]$ tree
-.
-├── common
-│   ├── app-settings.json.merge.tmpl
-│   ├── extensions.txt.merge.tmpl
-│   └── user-settings.json.tmpl
-├── insiders-B
-│   └── stai-all.code-workspace.merge.tmpl
-├── insiders-C
-│   └── stai-all.code-workspace.merge.tmpl
-├── insiders-D
-│   └── stai-all.code-workspace.merge.tmpl
-├── insiders-E
-│   ├── stai-all.code-workspace.merge.tmpl
-│   └── user-settings.json.merge.tmpl
-└── readme.md
-```
+## ipm-tools
 
-git repo: [stai-vscode-userconf](https://github.com/mj41/stai-vscode-userconf)
+The Go `ipmt` toolchain: parser, validator, layout engine, SVG renderer, Markdown embedding,
+and the `ipm-rpc` language server behind the VS Code extension. Also the
+[ipmt syntax spec](https://github.com/infinite-pm/ipm-tools/blob/main/docs/ipmt-spec.md).
 
-## stai-copilot
+git repo: [ipm-tools](https://github.com/infinite-pm/ipm-tools)
 
-Contains VS Code Copilot configuration files in `.github` directory.
+## vscode-infinite-pm
 
-git repo: [stai-copilot](https://github.com/mj41/stai-copilot)
+The VS Code extension, on the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=infinite-pm.vscode-infinite-pm):
+`ipmt` highlighting, live preview, diagnostics, hover docs, and embed on save that keeps the
+committed SVG diagrams in sync with their source.
 
-## stai-bins
-
-Binaries and documentation for various tools including aicmd and aiterm.
-
-git repo: [stai-bins](https://github.com/mj41/stai-bins)
-
-## stai-tools
-
-stai-bin tools source code and related utilities.
-
-git repo: [stai-tools](https://github.com/mj41/stai-tools)
-
-# Git Related Projects
-
-## gl-git-links
-
-The `gl:` git-links specification and related tools.
-
-git repo: [gl-git-links](https://github.com/mj41/gl-git-links)
-
-## vscode-gl-git-links
-
-Visual Studio Code extension for `gl:` git link syntax. See `gl-git-links` repo above. Features clickable links, quick fixes, line number support, and more.
-
-git repo: [vscode-gl-git-links](https://github.com/mj41/vscode-gl-git-links)
-
-## gl-exA, gl-exA-src
-
-`gl-exA` is an example repository for `gl-git-links` tools. `gl-exA-src` contains assets to programmatically generate the `gl-exA` git repository including git history.
+![The .ipmt title-bar buttons: preview in place, back to source, and side by side](imgs/vscode-infinite-pm-ipmt-buttons.gif)
 
 git repos:
-- [gl-exA](https://github.com/mj41/gl-exA)
-- [gl-exA-src](https://github.com/mj41/gl-exA-src)
+- [vscode-infinite-pm](https://github.com/infinite-pm/vscode-infinite-pm): the extension
+- [vscode-infinite-pm-demo](https://github.com/infinite-pm/vscode-infinite-pm-demo): recordings
+  of what it does, with step by step stills (no license yet)
+- [vscode-infinite-pm-dev](https://github.com/infinite-pm/vscode-infinite-pm-dev): the tooling
+  that records them, real VS Code driven by Playwright in a container (no license yet)
 
-# git-rgen-tool
+## infinite-pm-web, infinite-pm-lab, semantic-st-web
 
-Tool to programmatically generate git repositories from structured assets.
+The websites: [infinite.pm](https://infinite.pm), [lab.infinite.pm](https://lab.infinite.pm)
+for experimental results, POCs and sandcastles, and [semantic.st](https://semantic.st), a list
+of links about Semantic Spacetime.
 
-git repo: [git-rgen-tool](https://github.com/mj41/git-rgen-tool)
+git repos:
+- [infinite-pm-web](https://github.com/infinite-pm/infinite-pm-web)
+- [infinite-pm-lab](https://github.com/infinite-pm/infinite-pm-lab)
+- [semantic-st-web](https://github.com/infinite-pm/semantic-st-web) (no license yet)
 
-## git-wmem
+## Early experiments
 
-Git based utils to track uncommitted changes in multiple git repositories. Triggered by events, periodically or manually.
+Tools that trace a program's run and match its log lines, ptrace events and source code
+lines. Not public.
 
-git repo: [git-wmem](https://github.com/mj41/git-wmem)
+- **ipm-golog-refs**: analyzes Go source code to extract and catalog logging calls.
+- **ipm-fuzzy-match**: matches program log entries to their source code locations, using
+  `ipm-golog-refs` output and shortest unique substrings.
+- **ipm-ptrace**: ptrace-based filesystem monitoring with race-free file snapshotting for
+  Linux (Fedora 42+).
+- **ipm-trace-proc**: the three above integrated: traces a program's execution and correlates
+  log entries, ptrace events and source code lines.
+- **ipm-example-small**: distributed logging across multiple Go modules, as an example.
+- **ipm-drawio**: explores the `ipmt` format and converts diagrams to and from draw.io.
 
-## git-mj-rebase
-
-Git rebase tool.
-
-git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase)
-
-## vscode-staiwatch-logger
-
-A VS Code extension that logs workspace and file events to JSONL files for audit and analysis purposes.
-
-git repo: later
-
-## git-wmem-exa1
-
-Automated tools to generate comprehensive HTML documentation of git-wmem state transitions using real git-wmem-commit binaries.
-
-git repo: later
-
-# IPM - Infinite Process Modeling
-
-## ipm-drawio
-
-Utilities for exploring the ipm text format (`.ipmt`) and converting diagrams to and from draw.io.
-
-git repo: soon
-
-## ipm-example-small
-
-Demonstrate distributed logging across multiple Go modules.
-
-git repo: soon
-
-## ipm-fuzzy-match
-
-A tool for matching program log entries to their source code locations using exact literal pattern matching. Takes output from `ipm-golog-refs` (metadata about log calls in source code) and program log output, then correlates log records to specific source code lines using shortest unique substring algorithms.
-
-git repo: soon
-
-## ipm-golog-refs
-
-Analyzes Go source code to extract and catalog logging calls.
-
-git repo: soon
-
-## ipm-ptrace
-
-Advanced ptrace-based filesystem monitoring with race-free file snapshotting for Linux (Fedora 42+).
-
-git repo: soon
-
-## ipm-trace-proc
-
-Integrated `ipm-golog-refs`, `ipm-ptrace` `and ipm-fuzzy-match` tool to trace program execution and correlate log entries, ptrace events and source code lines.
-
-git repo: soon
+The first "coming soon" page of infinite.pm, now replaced by infinite-pm-web:
+[ipm-web](https://github.com/mj41/ipm-web).
 
 # home-w42-eu: a local first home platform, with Stackchan robots
 
@@ -165,7 +104,18 @@ micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet. Li
 Stackchan firmware fork and the two servers built with it (stackchan-server, stackchan-pet),
 Apache-2.0 for the rest.
 
-Public instance of the robot dashboard: [chan.w42.eu](https://chan.w42.eu).
+Overview page: [home.w42.eu](https://home.w42.eu). Public instance of the robot dashboard:
+[chan.w42.eu](https://chan.w42.eu).
+
+**The robot is a body; the app lives on a server.** Point the robot at another server and the
+same robot becomes a pet for kids, a dashboard with every raw sensor, or a cockpit that drives
+a car:
+
+![One robot, many apps: the dashboard, the QR screen, the pet and its menus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
+
+| Pet for kids ([stackchan-pet](https://github.com/mj41/stackchan-pet)) | Every raw sensor ([stackchan-server](https://github.com/mj41/stackchan-server)) | Robot + car ([sbot](https://github.com/mj41/sbot)) |
+|---|---|---|
+| <img src="imgs/stackchan-pet-kid-page.png" width="240" alt="The pet's page for kids"> | <img src="imgs/stackchan-dashboard-sensors.png" width="300" alt="The dashboard's sensors"> | <img src="imgs/sbot-cockpit.png" width="360" alt="The sbot cockpit, camera off"> |
 
 ## home-w42-eu
 
@@ -246,13 +196,241 @@ git repo: [stackchan-mj](https://github.com/mj41/stackchan-mj)
 
 license: Apache-2.0
 
-# Others
+## ha-modbus-windows-shutter
+
+Older, before home-w42-eu: Python scripts that connect a Waveshare Modbus RTU Relay 32CH to
+Home Assistant to control window shutters.
+
+git repo: [ha-modbus-windows-shutter](https://github.com/mj41/ha-modbus-windows-shutter)
+
+# stai: VS Code and AI agent tooling
+
+## stai-vscode
+
+Toolset and configuration for Visual Studio Code.
+
+git repo: stai-vscode (private for now)
+
+### cmd/vscode-bin-manager
+
+VS Code binary manager for downloading, installing, and managing multiple VS Code insiders daily builds.
+
+### cmd/ws-config-gen
+
+VS Code automation and configuration tools.
+
+Generates VS Code separate profiles and Fedora Linux desktop shortcuts:
+![stai-fedora-profiles](imgs/stai-fedora-profiles.png)
+
+Each has its own settings, extensions, configurations and title bar color:
+![stai-vscode-E](imgs/stai-vscode-E.png)
+
+## stai-vscode-userconf
+
+User configuration templates for VS Code.
+```
+~/work-stai/stai-vscode-userconf [main L|✔]$ tree
+.
+├── common
+│   ├── app-settings.json.merge.tmpl
+│   ├── extensions.txt.merge.tmpl
+│   └── user-settings.json.tmpl
+├── insiders-B
+│   └── stai-all.code-workspace.merge.tmpl
+├── insiders-C
+│   └── stai-all.code-workspace.merge.tmpl
+├── insiders-D
+│   └── stai-all.code-workspace.merge.tmpl
+├── insiders-E
+│   ├── stai-all.code-workspace.merge.tmpl
+│   └── user-settings.json.merge.tmpl
+└── readme.md
+```
+
+git repo: [stai-vscode-userconf](https://github.com/mj41/stai-vscode-userconf)
+
+## stai-copilot
+
+AGENTS.md and other files for AI agents; VS Code Copilot configuration in the `.github`
+directory.
+
+git repo: [stai-copilot](https://github.com/mj41/stai-copilot)
+
+## stai-bins
+
+Binaries and documentation for various tools including aicmd and aiterm.
+
+git repo: [stai-bins](https://github.com/mj41/stai-bins)
+
+## stai-tools
+
+stai-bin tools source code and related utilities.
+
+git repo: [stai-tools](https://github.com/mj41/stai-tools)
+
+## vscode-staiwatch-logger
+
+A VS Code extension that logs workspace and file events to JSONL files for audit and analysis purposes.
+
+git repo: later
+
+# Git tools
+
+## gl-git-links
+
+The `gl:` git-links specification and related tools.
+
+git repo: [gl-git-links](https://github.com/mj41/gl-git-links)
+
+## vscode-gl-git-links
+
+Visual Studio Code extension for `gl:` git link syntax. See `gl-git-links` repo above. Features clickable links, quick fixes, line number support, and more.
+
+![gl: links in Markdown, with a line number](imgs/gl-git-links-inline-links.png)
+
+git repo: [vscode-gl-git-links](https://github.com/mj41/vscode-gl-git-links)
+
+## gl-exA, gl-exA-src
+
+`gl-exA` is an example repository for `gl-git-links` tools. `gl-exA-src` contains assets to programmatically generate the `gl-exA` git repository including git history.
+
+git repos:
+- [gl-exA](https://github.com/mj41/gl-exA) (no license yet)
+- [gl-exA-src](https://github.com/mj41/gl-exA-src)
+
+## git-rgen-tool
+
+Tool to programmatically generate git repositories from structured assets.
+
+git repo: [git-rgen-tool](https://github.com/mj41/git-rgen-tool)
+
+## git-wmem
+
+Git based utils to track uncommitted changes in multiple git repositories. Triggered by events, periodically or manually.
+
+git repo: [git-wmem](https://github.com/mj41/git-wmem)
+
+## git-wmem-exa1
+
+Automated tools to generate comprehensive HTML documentation of git-wmem state transitions using real git-wmem-commit binaries.
+
+git repo: later
+
+## git-mj-rebase
+
+Git rebase tool.
+
+git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase) (no license yet)
+
+# Minecraft
+
+The server runs at [mc.w42.eu](https://mc.w42.eu). All Minecraft projects, including the
+private ones behind the server: [mj-ofun-mc](https://github.com/mj41/mj-ofun-mc).
+
+## mc26, go-mc26, go-mc26-kit
+
+A Go library for Minecraft: Java Edition 26.x, generated from Mojang's unobfuscated server
+jars: the network protocol, game data and world formats as Go types, one branch per Minecraft
+version. `mc26` extracts JSON from the jar and generates the library; `go-mc26-kit` adds a
+client, a server framework, account flows and examples, tested against every build.
+
+git repos:
+- [mc26](https://github.com/mj41/mc26): the extractors, generators and pipeline
+- [go-mc26](https://github.com/mj41/go-mc26): the generated library
+- [go-mc26-kit](https://github.com/mj41/go-mc26-kit): bot, server framework, accounts, examples
+- [mc26-data](https://github.com/mj41/mc26-data): the game data and wire schema of every
+  release as JSON, with Markdown docs
+- [mc26-data-pre](https://github.com/mj41/mc26-data-pre): the same for snapshots and pre-releases
+
+license: MIT (go-mc26 carries code from [Tnze/go-mc](https://github.com/Tnze/go-mc))
 
 ## minecraft-fedora-installer
 
 Per-user Minecraft launcher installer for Fedora Linux (Go). Downloads the official launcher, installs it into XDG locations, and creates a desktop entry with automatic GPU detection.
 
 git repo: [minecraft-fedora-installer](https://github.com/mj41/minecraft-fedora-installer)
+
+# mj41.cz
+
+[mj41.cz](https://mj41.cz): a single hand-written page, no build step. It shows one of my
+first programs, written in a school notebook in 1991/92 when I was 11, in BASIC-G for the
+PMD 85, a Czechoslovak 8-bit computer. The green screens are not drawn: a container builds
+[GPMD85Emulator](https://github.com/mborik/GPMD85Emulator), boots a PMD 85-2A with the
+BASIC-G V2.A ROM module, and types the program in one key at a time. A script then turns the
+captured bitmap into something that looks like a photo of the monitor. Details:
+[tools/pmd85-emulator](https://github.com/mj41/mj41.github.io/blob/main/tools/pmd85-emulator/README.md).
+
+![The 1991/92 BASIC-G listing on the green screen of an emulated PMD 85-2A](imgs/mj41cz-pmd85-screen.jpg)
+
+git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io) (no license yet)
+
+# Web and infrastructure
+
+## w42-eu-web
+
+The [w42.eu](https://w42.eu) landing page and [home.w42.eu](https://home.w42.eu): one Go
+binary with the pages embedded.
+
+git repo: [w42-eu-web](https://github.com/mj41/w42-eu-web)
+
+## go-redir-svc
+
+A lightweight Go service for domain redirects, with JSONL logging per group of domains and
+one certificate per group.
+
+git repo: [go-redir-svc](https://github.com/mj41/go-redir-svc)
+
+## go-test-web
+
+A simple Go web server for Kubernetes that serves a test page.
+
+git repo: [go-test-web](https://github.com/mj41/go-test-web)
+
+# Forks
+
+- [StackChan](https://github.com/mj41/StackChan): Embody Mode on branch `embody-mj41`, see
+  [above](#stackchan-firmware-embody-mode).
+- [go-mc](https://github.com/mj41/go-mc): branch `mj-262-cubes` supports Minecraft 26.2
+  (protocol 776); `mj-121-cubes` is the frozen 1.21.11 line.
+- [SSTorytime](https://github.com/mj41/SSTorytime): Mark Burgess's Semantic Spacetime story
+  graph database.
+- [ipm-intro](https://github.com/mj41/ipm-intro): my fork of infinite-pm/ipm-intro.
+- [vscode](https://github.com/mj41/vscode),
+  [vscode-github-markdown-preview](https://github.com/mj41/vscode-github-markdown-preview),
+  [cert-manager-webhook-linode](https://github.com/mj41/cert-manager-webhook-linode).
+
+# Older projects
+
+Perl and Raku (Perl 6), 2010–2022:
+
+- Presentations: [git-course-mj41](https://github.com/mj41/git-course-mj41),
+  [perl6-history-mj41](https://github.com/mj41/perl6-history-mj41),
+  [perl-myths-busters](https://github.com/mj41/perl-myths-busters),
+  [Presentation-Builder](https://github.com/mj41/Presentation-Builder),
+  [prbuilder-docker](https://github.com/mj41/prbuilder-docker)
+- Git analytics: [Git-Analytics](https://github.com/mj41/Git-Analytics),
+  [Git-ClonesManager](https://github.com/mj41/Git-ClonesManager),
+  [Git-Repository-LogRaw](https://github.com/mj41/Git-Repository-LogRaw),
+  [git-trepo](https://github.com/mj41/git-trepo),
+  [git-trepo-gen](https://github.com/mj41/git-trepo-gen)
+- Raku: [Perl6-Analytics](https://github.com/mj41/Perl6-Analytics),
+  [Perl6-Analytics-results](https://github.com/mj41/Perl6-Analytics-results),
+  [Perl-6-GD](https://github.com/mj41/Perl-6-GD),
+  [Raku-StepByStep](https://github.com/mj41/Raku-StepByStep),
+  [Algorithm-SpiralMatrix](https://github.com/mj41/Algorithm-SpiralMatrix),
+  [SP6](https://github.com/mj41/SP6),
+  [docker-perl6-star](https://github.com/mj41/docker-perl6-star)
+- Google AI Challenge bots: [AIAnts](https://github.com/mj41/AIAnts),
+  [MyTronBot](https://github.com/mj41/MyTronBot)
+- Utilities: [auto-unrar](https://github.com/mj41/auto-unrar),
+  [backup-mj41cz](https://github.com/mj41/backup-mj41cz),
+  [fancontrol](https://github.com/mj41/fancontrol),
+  [perl-inotify](https://github.com/mj41/perl-inotify),
+  [threading](https://github.com/mj41/threading),
+  [BrnoPM-Web](https://github.com/mj41/BrnoPM-Web),
+  [www-gooddata](https://github.com/mj41/www-gooddata) (fork)
+
+# This repo and local directories
 
 ## mj-ofun
 
