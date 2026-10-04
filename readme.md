@@ -62,9 +62,9 @@ committed SVG diagrams in sync with their source.
 git repos:
 - [vscode-infinite-pm](https://github.com/infinite-pm/vscode-infinite-pm): the extension
 - [vscode-infinite-pm-demo](https://github.com/infinite-pm/vscode-infinite-pm-demo): recordings
-  of what it does, with step by step stills (no license yet)
+  of what it does, with step by step stills
 - [vscode-infinite-pm-dev](https://github.com/infinite-pm/vscode-infinite-pm-dev): the tooling
-  that records them, real VS Code driven by Playwright in a container (no license yet)
+  that records them, real VS Code driven by Playwright in a container
 
 ## infinite-pm-web, infinite-pm-lab, semantic-st-web
 
@@ -75,7 +75,7 @@ of links about Semantic Spacetime.
 git repos:
 - [infinite-pm-web](https://github.com/infinite-pm/infinite-pm-web)
 - [infinite-pm-lab](https://github.com/infinite-pm/infinite-pm-lab)
-- [semantic-st-web](https://github.com/infinite-pm/semantic-st-web) (no license yet)
+- [semantic-st-web](https://github.com/infinite-pm/semantic-st-web)
 
 ## Early experiments
 
@@ -295,7 +295,7 @@ git repo: [vscode-gl-git-links](https://github.com/mj41/vscode-gl-git-links)
 `gl-exA` is an example repository for `gl-git-links` tools. `gl-exA-src` contains assets to programmatically generate the `gl-exA` git repository including git history.
 
 git repos:
-- [gl-exA](https://github.com/mj41/gl-exA) (no license yet)
+- [gl-exA](https://github.com/mj41/gl-exA)
 - [gl-exA-src](https://github.com/mj41/gl-exA-src)
 
 ## git-rgen-tool
@@ -320,7 +320,7 @@ git repo: later
 
 Git rebase tool.
 
-git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase) (no license yet)
+git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase)
 
 # Minecraft
 
@@ -362,7 +362,7 @@ captured bitmap into something that looks like a photo of the monitor. Details:
 
 ![The 1991/92 BASIC-G listing on the green screen of an emulated PMD 85-2A](imgs/mj41cz-pmd85-screen.jpg)
 
-git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io) (no license yet)
+git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io)
 
 # Web and infrastructure
 
