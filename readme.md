@@ -113,7 +113,7 @@ focus timer).
 same robot becomes a pet for kids, a dashboard with every raw sensor, or a cockpit that drives
 a car:
 
-![One robot, many apps: the dashboard, the QR screen, the pet and its menus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
+![One robot, many apps, in 3D: Raw data, the app switcher's QR screen, the pet and its menus, Focus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
 
 | Pet for kids ([s-w42-eu-pet](https://github.com/mj41/s-w42-eu-pet)) | Every raw sensor ([s-w42-eu-raw](https://github.com/mj41/s-w42-eu-raw)) | Robot + car ([s-w42-eu-sbot](https://github.com/mj41/s-w42-eu-sbot)) |
 |---|---|---|
