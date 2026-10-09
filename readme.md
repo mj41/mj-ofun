@@ -168,6 +168,17 @@ git repo: [stackchan-pet](https://github.com/mj41/stackchan-pet)
 
 license: MIT
 
+## s-w42-eu-focus
+
+Focus, a focus timer for Stackchan in the style of the Pomodoro Technique® (Go), an Embody Mode
+app the robot switches to. The robot is the timer: the time left as a ring and on its LEDs, a
+chime and a nod when a phase ends, "FREE IN 12 MIN" for the room; tap to start or pause, hold to
+skip. A phone paired by the QR code adds the task, interruption marks, statistics and settings.
+
+git repo: [s-w42-eu-focus](https://github.com/mj41/s-w42-eu-focus)
+
+license: Apache-2.0
+
 ## sbot
 
 The seed of the home node: a web/API server with a cockpit for a Stackchan and a TPBot car
