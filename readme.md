@@ -101,11 +101,13 @@ A **local first, security and privacy first platform for a home**: Go servers on
 machine at home, every device (new or old) a light client of them, and loops that AI
 helps you write and you approve. The first devices are M5Stack Stackchan robots and a
 micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet. Licenses: MIT for the
-Stackchan firmware fork and the two servers built with it (stackchan-server, stackchan-pet),
+Stackchan firmware fork (as upstream) and s-w42-eu-raw, s-w42-eu-pet and s-w42-eu-manager,
 Apache-2.0 for the rest.
 
-Overview page: [home.w42.eu](https://home.w42.eu). Public instance of the robot dashboard:
-[chan.w42.eu](https://chan.w42.eu).
+Overview page: [s.w42.eu](https://s.w42.eu). Live on w42.eu: [sm.w42.eu](https://sm.w42.eu) (set a
+robot up, its apps), [raw.sa.w42.eu](https://raw.sa.w42.eu) (every raw sensor),
+[pet.sa.w42.eu](https://pet.sa.w42.eu) (the pet), [focus.sa.w42.eu](https://focus.sa.w42.eu) (the
+focus timer).
 
 **The robot is a body; the app lives on a server.** Point the robot at another server and the
 same robot becomes a pet for kids, a dashboard with every raw sensor, or a cockpit that drives
@@ -113,7 +115,7 @@ a car:
 
 ![One robot, many apps: the dashboard, the QR screen, the pet and its menus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
 
-| Pet for kids ([stackchan-pet](https://github.com/mj41/stackchan-pet)) | Every raw sensor ([stackchan-server](https://github.com/mj41/stackchan-server)) | Robot + car ([sbot](https://github.com/mj41/sbot)) |
+| Pet for kids ([s-w42-eu-pet](https://github.com/mj41/s-w42-eu-pet)) | Every raw sensor ([s-w42-eu-raw](https://github.com/mj41/s-w42-eu-raw)) | Robot + car ([s-w42-eu-sbot](https://github.com/mj41/s-w42-eu-sbot)) |
 |---|---|---|
 | <img src="imgs/stackchan-pet-kid-page.png" width="240" alt="The pet's page for kids"> | <img src="imgs/stackchan-dashboard-sensors.png" width="300" alt="The dashboard's sensors"> | <img src="imgs/sbot-cockpit.png" width="360" alt="The sbot cockpit, camera off"> |
 
@@ -146,25 +148,38 @@ git repo: [StackChan, branch embody-mj41](https://github.com/mj41/StackChan/tree
 
 license: MIT (the firmware, as upstream)
 
-## stackchan-server
+## s-w42-eu-manager
+
+The Stackchan manager (Go), optional: sets robots up with one click over USB (firmware, apps,
+Wi-Fi), gives each robot its own token for each app, keeps a live connection to its robots
+(switch apps, restart, change apps from the page), and signs people in once for every app. At
+home on your own computer, or online at [sm.w42.eu](https://sm.w42.eu); a home manager may link
+up to it.
+
+git repo: [s-w42-eu-manager](https://github.com/mj41/s-w42-eu-manager)
+
+license: MIT
+
+## s-w42-eu-raw
 
 Relay and dashboard for Stackchan robots in Embody Mode (Go, single binary), and the Go
 implementation of the wire protocol. The robot connects out over WebSocket, and a phone
 pairs by scanning the QR code on the robot's screen. The phone then gets a live dashboard:
-camera, microphone, speaker, head motion, face, LEDs, every sensor, IR, NFC, files.
+camera, microphone, speaker, head motion, face, LEDs, every sensor, IR, NFC, files; end to end
+encrypted, so the server relays only ciphertext.
 
-git repo: [stackchan-server](https://github.com/mj41/stackchan-server)
+git repo: [s-w42-eu-raw](https://github.com/mj41/s-w42-eu-raw)
 
 license: MIT
 
-## stackchan-pet
+## s-w42-eu-pet
 
 A Tamagotchi for Stackchan (Go), a second Embody Mode server the robot switches to. Kids
 care for the pet on the robot itself (head touches, NFC food cards, menus on the screen) and
 on a picture page on a phone. Games, a photo leaderboard, and a parent page with the daily
 routine behind a PIN. Czech and English.
 
-git repo: [stackchan-pet](https://github.com/mj41/stackchan-pet)
+git repo: [s-w42-eu-pet](https://github.com/mj41/s-w42-eu-pet)
 
 license: MIT
 
@@ -179,13 +194,13 @@ git repo: [s-w42-eu-focus](https://github.com/mj41/s-w42-eu-focus)
 
 license: Apache-2.0
 
-## sbot
+## s-w42-eu-sbot
 
 The seed of the home node: a web/API server with a cockpit for a Stackchan and a TPBot car
 (camera, joystick, head pad, lights, a sonar safety stop), an event hub (NATS JetStream),
 and a controller server for loops.
 
-git repo: [sbot](https://github.com/mj41/sbot)
+git repo: [s-w42-eu-sbot](https://github.com/mj41/s-w42-eu-sbot)
 
 license: Apache-2.0
 
@@ -195,15 +210,6 @@ micro:bit V2 firmware (TinyGo) for the ELECFREAKS TPBot car: a BLE peripheral wi
 sensors and a watchdog, plus a laptop tool and a bridge.
 
 git repo: [tpbot-ble](https://github.com/mj41/tpbot-ble)
-
-license: Apache-2.0
-
-## stackchan-mj
-
-Notes, scripts and tools for working on Stackchan with Embody Mode: build and flash, run the
-servers in the background, hardware coverage, the trust design.
-
-git repo: [stackchan-mj](https://github.com/mj41/stackchan-mj)
 
 license: Apache-2.0
 
@@ -379,8 +385,8 @@ git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io)
 
 ## w42-eu-web
 
-The [w42.eu](https://w42.eu) landing page and [home.w42.eu](https://home.w42.eu): one Go
-binary with the pages embedded.
+The [w42.eu](https://w42.eu) landing page, [s.w42.eu](https://s.w42.eu) (the Stackchan
+projects) and [mcbot.w42.eu](https://mcbot.w42.eu): one Go binary with the pages embedded.
 
 git repo: [w42-eu-web](https://github.com/mj41/w42-eu-web)
 
