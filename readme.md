@@ -150,11 +150,11 @@ license: MIT (the firmware, as upstream)
 
 ## s-w42-eu-manager
 
-The Stackchan manager (Go), optional: sets robots up with one click over USB (firmware, apps,
-Wi-Fi), gives each robot its own token for each app, keeps a live connection to its robots
-(switch apps, restart, change apps from the page), and signs people in once for every app. At
-home on your own computer, or online at [sm.w42.eu](https://sm.w42.eu); a home manager may link
-up to it.
+The home manager for Stackchan robots (Go), optional: runs on your own computer, sets robots up
+with one click over USB (firmware, apps, Wi-Fi), gives each robot its own token for each app, and
+keeps a live connection to its robots (switch apps, restart, change apps from the page). It can
+link up to the online manager at [sm.w42.eu](https://sm.w42.eu). Also `s-w42-eu-usb`: the same
+setup from a terminal, and driving a robot over USB.
 
 git repo: [s-w42-eu-manager](https://github.com/mj41/s-w42-eu-manager)
 
