@@ -3,7 +3,7 @@
 Various [mj41's projects](https://github.com/mj41):
 
 1. [infinite.pm: Infinite Process Modeling](#infinitepm-infinite-process-modeling)
-2. [home-w42-eu: a local first home platform, with Stackchan robots](#home-w42-eu-a-local-first-home-platform-with-stackchan-robots)
+2. [i41: a local first home platform, with Stackchan robots](#i41-a-local-first-home-platform-with-stackchan-robots)
 3. [stai: VS Code and AI agent tooling](#stai-vs-code-and-ai-agent-tooling)
 4. [Git tools](#git-tools)
 5. [Minecraft](#minecraft)
@@ -95,16 +95,16 @@ lines. Not public.
 The first "coming soon" page of infinite.pm, now replaced by infinite-pm-web:
 [ipm-web](https://github.com/mj41/ipm-web).
 
-# home-w42-eu: a local first home platform, with Stackchan robots
+# i41: a local first home platform, with Stackchan robots
 
 A **local first, security and privacy first platform for a home**: Go servers on a small
 machine at home, every device (new or old) a light client of them, and loops that AI
 helps you write and you approve. The first devices are M5Stack Stackchan robots and a
 micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet. Licenses: MIT for the
-Stackchan firmware fork (as upstream) and s-w42-eu-raw, s-w42-eu-pet and s-w42-eu-manager,
-Apache-2.0 for the rest.
+Stackchan firmware fork (as upstream) and q41eu-raw, q41eu-pet and i41eu-manager,
+Apache-2.0 for the rest. All in the GitHub organization [i41-eu](https://github.com/i41-eu).
 
-Overview page: [s.i41.eu](https://s.i41.eu). Live: [m.i41.eu](https://m.i41.eu) (set a
+Home page: [i41.eu](https://i41.eu). The robot and its apps: [s.i41.eu](https://s.i41.eu). Live: [m.i41.eu](https://m.i41.eu) (set a
 robot up, its apps), [raw.q41.eu](https://raw.q41.eu) (every raw sensor),
 [pet.q41.eu](https://pet.q41.eu) (the pet), [focus.q41.eu](https://focus.q41.eu) (the
 focus timer).
@@ -115,24 +115,24 @@ a car:
 
 ![One robot, many apps, in 3D: Raw data, the app switcher's QR screen, the pet and its menus, Focus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
 
-| Pet for kids ([s-w42-eu-pet](https://github.com/mj41/s-w42-eu-pet)) | Every raw sensor ([s-w42-eu-raw](https://github.com/mj41/s-w42-eu-raw)) | Robot + car ([s-w42-eu-sbot](https://github.com/mj41/s-w42-eu-sbot)) |
+| Pet for kids ([q41eu-pet](https://github.com/i41-eu/q41eu-pet)) | Every raw sensor ([q41eu-raw](https://github.com/i41-eu/q41eu-raw)) | Robot + car ([q41eu-sbot](https://github.com/i41-eu/q41eu-sbot)) |
 |---|---|---|
 | <img src="imgs/stackchan-pet-kid-page.png" width="240" alt="The pet's page for kids"> | <img src="imgs/stackchan-dashboard-sensors.png" width="300" alt="The dashboard's sensors"> | <img src="imgs/sbot-cockpit.png" width="360" alt="The sbot cockpit, camera off"> |
 
-## home-w42-eu
+## i41eu-arch
 
 Vision, use cases (the main driver), principles, architecture and the device wire protocol.
 
-git repo: [home-w42-eu](https://github.com/mj41/home-w42-eu)
+git repo: [i41eu-arch](https://github.com/i41-eu/i41eu-arch)
 
 license: Apache-2.0
 
-## home-w42-eu-ideas
+## i41eu-ideas
 
 Ideas for devices, adapters and loops: old phones, a Roomba, Home Assistant, a private GPS
 app, cameras, Wi-Fi presence, calendars, personal captures, local voice.
 
-git repo: [home-w42-eu-ideas](https://github.com/mj41/home-w42-eu-ideas)
+git repo: [i41eu-ideas](https://github.com/i41-eu/i41eu-ideas)
 
 license: Apache-2.0
 
@@ -142,25 +142,26 @@ Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embod
 the robot as a light client of a server you choose (camera, microphone, speaker, every
 sensor as raw data, commands), switchable between servers and apps. Optional: it drives a
 TPBot car over BLE, and servers can automate it. Setup guide:
-[SETUP.md](https://github.com/mj41/StackChan/blob/embody-mj41/firmware/main/apps/app_embody_mode/SETUP.md).
+[SETUP.md](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/SETUP.md).
 
-git repo: [StackChan, branch embody-mj41](https://github.com/mj41/StackChan/tree/embody-mj41)
+git repo: [i41eu-StackChan, branch embody](https://github.com/i41-eu/i41eu-StackChan) (a fork of
+m5stack/StackChan)
 
 license: MIT (the firmware, as upstream)
 
-## s-w42-eu-manager
+## i41eu-manager
 
 The home manager for Stackchan robots (Go), optional: runs on your own computer, sets robots up
 with one click over USB (firmware, apps, Wi-Fi), gives each robot its own token for each app, and
 keeps a live connection to its robots (switch apps, restart, change apps from the page). It can
-link up to the online manager at [m.i41.eu](https://m.i41.eu). Also `s-w42-eu-usb`: the same
+link up to the online manager at [m.i41.eu](https://m.i41.eu). Also `i41eu-usb`: the same
 setup from a terminal, and driving a robot over USB.
 
-git repo: [s-w42-eu-manager](https://github.com/mj41/s-w42-eu-manager)
+git repo: [i41eu-manager](https://github.com/i41-eu/i41eu-manager)
 
 license: MIT
 
-## s-w42-eu-raw
+## q41eu-raw
 
 Relay and dashboard for Stackchan robots in Embody Mode (Go, single binary), and the Go
 implementation of the wire protocol. The robot connects out over WebSocket, and a phone
@@ -168,54 +169,90 @@ pairs by scanning the QR code on the robot's screen. The phone then gets a live 
 camera, microphone, speaker, head motion, face, LEDs, every sensor, IR, NFC, files; end to end
 encrypted, so the server relays only ciphertext.
 
-git repo: [s-w42-eu-raw](https://github.com/mj41/s-w42-eu-raw)
+git repo: [q41eu-raw](https://github.com/i41-eu/q41eu-raw)
 
 license: MIT
 
-## s-w42-eu-pet
+## q41eu-pet
 
 A Tamagotchi for Stackchan (Go), a second Embody Mode server the robot switches to. Kids
 care for the pet on the robot itself (head touches, NFC food cards, menus on the screen) and
 on a picture page on a phone. Games, a photo leaderboard, and a parent page with the daily
 routine behind a PIN. Czech and English.
 
-git repo: [s-w42-eu-pet](https://github.com/mj41/s-w42-eu-pet)
+git repo: [q41eu-pet](https://github.com/i41-eu/q41eu-pet)
 
 license: MIT
 
-## s-w42-eu-focus
+## q41eu-focus
 
 Focus, a focus timer for Stackchan in the style of the Pomodoro Technique® (Go), an Embody Mode
 app the robot switches to. The robot is the timer: the time left as a ring and on its LEDs, a
 chime and a nod when a phase ends, "FREE IN 12 MIN" for the room; tap to start or pause, hold to
 skip. A phone paired by the QR code adds the task, interruption marks, statistics and settings.
 
-git repo: [s-w42-eu-focus](https://github.com/mj41/s-w42-eu-focus)
+git repo: [q41eu-focus](https://github.com/i41-eu/q41eu-focus)
 
 license: Apache-2.0
 
-## s-w42-eu-sbot
+## q41eu-sbot
 
 The seed of the home node: a web/API server with a cockpit for a Stackchan and a TPBot car
 (camera, joystick, head pad, lights, a sonar safety stop), an event hub (NATS JetStream),
 and a controller server for loops.
 
-git repo: [s-w42-eu-sbot](https://github.com/mj41/s-w42-eu-sbot)
+git repo: [q41eu-sbot](https://github.com/i41-eu/q41eu-sbot)
 
 license: Apache-2.0
 
-## tpbot-ble
+## q41eu-dev
+
+Dev: your Stackchan robot for your own programs and AI agents (HTTP /v1 and MCP), and a Go kit
+for robot apps (robothub), so a new app is a few hundred lines. Online at
+[dev.q41.eu](https://dev.q41.eu), or on a computer at home.
+
+git repo: [q41eu-dev](https://github.com/i41-eu/q41eu-dev)
+
+license: Apache-2.0
+
+## i41eu-s3d
+
+The robot in 3D in the browser ([s.i41.eu/s3d/](https://s.i41.eu/s3d/)): its sensors and
+actuators, and what each app does with them, each with the line of source it comes from.
+
+git repo: [i41eu-s3d](https://github.com/i41-eu/i41eu-s3d)
+
+license: Apache-2.0
+
+## i41eu-assets
+
+robot3d: a model of the robot drawn in Go, with any picture on its screen; the robot pictures in
+the repos and on the pages.
+
+git repo: [i41eu-assets](https://github.com/i41-eu/i41eu-assets)
+
+license: Apache-2.0
+
+## i41eu-web
+
+The page at [i41.eu](https://i41.eu): the platform, with links to its parts.
+
+git repo: [i41eu-web](https://github.com/i41-eu/i41eu-web)
+
+license: Apache-2.0
+
+## i41eu-tpbot-ble
 
 micro:bit V2 firmware (TinyGo) for the ELECFREAKS TPBot car: a BLE peripheral with raw
 sensors and a watchdog, plus a laptop tool and a bridge.
 
-git repo: [tpbot-ble](https://github.com/mj41/tpbot-ble)
+git repo: [i41eu-tpbot-ble](https://github.com/i41-eu/i41eu-tpbot-ble)
 
 license: Apache-2.0
 
 ## ha-modbus-windows-shutter
 
-Older, before home-w42-eu: Python scripts that connect a Waveshare Modbus RTU Relay 32CH to
+Older, before i41: Python scripts that connect a Waveshare Modbus RTU Relay 32CH to
 Home Assistant to control window shutters.
 
 git repo: [ha-modbus-windows-shutter](https://github.com/mj41/ha-modbus-windows-shutter)
@@ -405,8 +442,6 @@ git repo: [go-test-web](https://github.com/mj41/go-test-web)
 
 # Forks
 
-- [StackChan](https://github.com/mj41/StackChan): Embody Mode on branch `embody-mj41`, see
-  [above](#stackchan-firmware-embody-mode).
 - [go-mc](https://github.com/mj41/go-mc): branch `mj-262-cubes` supports Minecraft 26.2
   (protocol 776); `mj-121-cubes` is the frozen 1.21.11 line.
 - [SSTorytime](https://github.com/mj41/SSTorytime): Mark Burgess's Semantic Spacetime story
