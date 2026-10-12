@@ -104,9 +104,9 @@ micro:bit car. All proofs of concept, vibe coded, not reviewed by humans yet. Li
 Stackchan firmware fork (as upstream) and s-w42-eu-raw, s-w42-eu-pet and s-w42-eu-manager,
 Apache-2.0 for the rest.
 
-Overview page: [s.w42.eu](https://s.w42.eu). Live on w42.eu: [sm.w42.eu](https://sm.w42.eu) (set a
-robot up, its apps), [raw.sa.w42.eu](https://raw.sa.w42.eu) (every raw sensor),
-[pet.sa.w42.eu](https://pet.sa.w42.eu) (the pet), [focus.sa.w42.eu](https://focus.sa.w42.eu) (the
+Overview page: [s.i41.eu](https://s.i41.eu). Live: [m.i41.eu](https://m.i41.eu) (set a
+robot up, its apps), [raw.q41.eu](https://raw.q41.eu) (every raw sensor),
+[pet.q41.eu](https://pet.q41.eu) (the pet), [focus.q41.eu](https://focus.q41.eu) (the
 focus timer).
 
 **The robot is a body; the app lives on a server.** Point the robot at another server and the
@@ -153,7 +153,7 @@ license: MIT (the firmware, as upstream)
 The home manager for Stackchan robots (Go), optional: runs on your own computer, sets robots up
 with one click over USB (firmware, apps, Wi-Fi), gives each robot its own token for each app, and
 keeps a live connection to its robots (switch apps, restart, change apps from the page). It can
-link up to the online manager at [sm.w42.eu](https://sm.w42.eu). Also `s-w42-eu-usb`: the same
+link up to the online manager at [m.i41.eu](https://m.i41.eu). Also `s-w42-eu-usb`: the same
 setup from a terminal, and driving a robot over USB.
 
 git repo: [s-w42-eu-manager](https://github.com/mj41/s-w42-eu-manager)
@@ -385,7 +385,7 @@ git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io)
 
 ## w42-eu-web
 
-The [w42.eu](https://w42.eu) landing page, [s.w42.eu](https://s.w42.eu) (the Stackchan
+The [w42.eu](https://w42.eu) landing page, [s.i41.eu](https://s.i41.eu) (the Stackchan
 projects) and [mcbot.w42.eu](https://mcbot.w42.eu): one Go binary with the pages embedded.
 
 git repo: [w42-eu-web](https://github.com/mj41/w42-eu-web)
