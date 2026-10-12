@@ -127,15 +127,6 @@ git repo: [i41eu-arch](https://github.com/i41-eu/i41eu-arch)
 
 license: Apache-2.0
 
-## i41eu-ideas
-
-Ideas for devices, adapters and loops: old phones, a Roomba, Home Assistant, a private GPS
-app, cameras, Wi-Fi presence, calendars, personal captures, local voice.
-
-git repo: [i41eu-ideas](https://github.com/i41-eu/i41eu-ideas)
-
-license: Apache-2.0
-
 ## StackChan firmware: Embody Mode
 
 Fork of [m5stack/StackChan](https://github.com/m5stack/StackChan) with the Embody Mode app:
