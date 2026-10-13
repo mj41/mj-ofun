@@ -113,11 +113,11 @@ focus timer).
 same robot becomes a pet for kids, a dashboard with every raw sensor, or a cockpit that drives
 a car:
 
-![One robot, many apps, in 3D: Raw data, the app switcher's QR screen, the pet and its menus, Focus, the cockpit](imgs/stackchan-one-robot-many-apps.gif)
+![One robot, many apps, in 3D: Raw data, the app switcher's QR screen, the pet and its menus, Focus, the cockpit](imgs/i41-one-robot-many-apps.gif)
 
 | Pet for kids ([q41eu-pet](https://github.com/i41-eu/q41eu-pet)) | Every raw sensor ([q41eu-raw](https://github.com/i41-eu/q41eu-raw)) | Robot + car ([q41eu-sbot](https://github.com/i41-eu/q41eu-sbot)) |
 |---|---|---|
-| <img src="imgs/stackchan-pet-kid-page.png" width="240" alt="The pet's page for kids"> | <img src="imgs/stackchan-dashboard-sensors.png" width="300" alt="The dashboard's sensors"> | <img src="imgs/sbot-cockpit.png" width="360" alt="The sbot cockpit, camera off"> |
+| <img src="imgs/i41-pet-kid-page.png" width="240" alt="The pet's page for kids"> | <img src="imgs/i41-dashboard-sensors.png" width="300" alt="The dashboard's sensors"> | <img src="imgs/sbot-cockpit.png" width="360" alt="The sbot cockpit, camera off"> |
 
 ## i41eu-arch
 
@@ -226,7 +226,9 @@ license: Apache-2.0
 
 ## i41eu-web
 
-The page at [i41.eu](https://i41.eu): the platform, with links to its parts.
+The pages at [i41.eu](https://i41.eu) (the platform, with links to its parts) and
+[s.i41.eu](https://s.i41.eu) (the Stackchan robot's page, a page per app): one Go binary with the
+pages embedded, chosen by the request's host.
 
 git repo: [i41eu-web](https://github.com/i41-eu/i41eu-web)
 
@@ -413,8 +415,8 @@ git repo: [mj41.github.io](https://github.com/mj41/mj41.github.io)
 
 ## w42-eu-web
 
-The [w42.eu](https://w42.eu) landing page, [s.i41.eu](https://s.i41.eu) (the Stackchan
-projects) and [mcbot.w42.eu](https://mcbot.w42.eu): one Go binary with the pages embedded.
+The [w42.eu](https://w42.eu) landing page (a list of mj41's projects) and
+[mcbot.w42.eu](https://mcbot.w42.eu): one Go binary with the pages embedded.
 
 git repo: [w42-eu-web](https://github.com/mj41/w42-eu-web)
 
