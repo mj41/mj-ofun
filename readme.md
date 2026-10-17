@@ -1,6 +1,6 @@
 # Overview
 
-Various [mj41's projects](https://mj41.cz) (on [GitHub](https://github.com/mj41); the sites: [w42.eu](https://w42.eu) for what runs for family and friends, [i41.eu](https://i41.eu) and [q41.eu](https://q41.eu) for the home platform, [infinite.pm](https://infinite.pm)):
+Various [mj41's projects](https://mj41.cz) (on [GitHub](https://github.com/mj41); the sites: [w42.eu](https://w42.eu) for what runs for fun, [i41.eu](https://i41.eu) and [q41.eu](https://q41.eu) for the home platform, [infinite.pm](https://infinite.pm)):
 
 1. [infinite.pm: Infinite Process Modeling](#infinitepm-infinite-process-modeling)
 2. [i41: a local first home platform, with Stackchan robots](#i41-a-local-first-home-platform-with-stackchan-robots)
