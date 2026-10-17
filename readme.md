@@ -1,6 +1,6 @@
 # Overview
 
-Various [mj41's projects](https://github.com/mj41):
+Various [mj41's projects](https://mj41.cz) (on [GitHub](https://github.com/mj41); the sites: [w42.eu](https://w42.eu) for what runs for family and friends, [i41.eu](https://i41.eu) and [q41.eu](https://q41.eu) for the home platform, [infinite.pm](https://infinite.pm)):
 
 1. [infinite.pm: Infinite Process Modeling](#infinitepm-infinite-process-modeling)
 2. [i41: a local first home platform, with Stackchan robots](#i41-a-local-first-home-platform-with-stackchan-robots)
@@ -374,6 +374,10 @@ git repo: [git-mj-rebase](https://github.com/mj41/git-mj-rebase)
 The server runs at [mc.w42.eu](https://mc.w42.eu). All Minecraft projects, including the
 private ones behind the server: [mj-ofun-mc](https://github.com/mj41/mj-ofun-mc).
 
+[mcbot.w42.eu](https://mcbot.w42.eu) shows Minecraft robots that play vanilla survival on their own, every run kept to watch and replay:
+
+[![The mcbot dashboard during a run: maps of the land, a 3D view of the robot's shelter and its log](imgs/mcbot-dashboard.webp)](https://mcbot.w42.eu)
+
 ## mc26, go-mc26, go-mc26-kit
 
 A Go library for Minecraft: Java Edition 26.x, generated from Mojang's unobfuscated server
@@ -474,19 +478,3 @@ Perl and Raku (Perl 6), 2010–2022:
   [threading](https://github.com/mj41/threading),
   [BrnoPM-Web](https://github.com/mj41/BrnoPM-Web),
   [www-gooddata](https://github.com/mj41/www-gooddata) (fork)
-
-# This repo and local directories
-
-## mj-ofun
-
-This repository.
-
-git repo: [mj-ofun](https://github.com/mj41/mj-ofun)
-
-## profiles-stai
-
-Local directory for stai-vscode generated VS Code profiles.
-
-### opt
-
-Local directory for VS Code insiders binaries and extensions-cache directories.
